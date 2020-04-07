@@ -19,11 +19,21 @@
         android:id="@+id/aviso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sostenga algúno de los items de la lista para eliminarlo"
+        android:text="Lo que tengo que hacer"
         app:layout_constraintBottom_toTopOf="@id/listaAgregar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Lista_diara" />
+    <TextView
+        android:id="@+id/aviso2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Para Borrar algún ítem de la lista, seleccionelo y sostengalo por uno segundos"
+        app:layout_constraintBottom_toTopOf="@id/editText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listaAgregar" />
+
     <Button
         android:text="Agregar"
         android:layout_width="wrap_content"
@@ -36,30 +46,32 @@
         android:layout_width="278dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="21dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:hint="Write your next task"
+        android:hint="Ingresa una tarea nueva"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aviso2" />
 
     <ListView
         android:id="@+id/Lista_diara"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="230dp"
         android:entries="@array/listaDiaria"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-
-        tools:layout_editor_absoluteX="8dp" />
+        tools:layout_editor_absoluteX="8dp"
+        />
 
     <ListView
         android:id="@+id/listaAgregar"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="230dp"
         android:layout_marginBottom="29dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/aviso2"
         app:layout_constraintTop_toBottomOf="@+id/Lista_diara" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
