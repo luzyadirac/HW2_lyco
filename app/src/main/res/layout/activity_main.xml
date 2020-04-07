@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Algunas actividades sugeridas"
+        app:layout_constraintBottom_toTopOf="@id/Lista_diara"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/aviso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sostenga algúno de los items de la lista para eliminarlo"
+        app:layout_constraintBottom_toTopOf="@id/listaAgregar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Lista_diara" />
+    <Button
+        android:text="Agregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Write your next task"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/Lista_diara"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:entries="@array/listaDiaria"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+
+        tools:layout_editor_absoluteX="8dp" />
+
+    <ListView
+        android:id="@+id/listaAgregar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/Lista_diara" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

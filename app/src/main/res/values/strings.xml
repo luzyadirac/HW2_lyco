@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Todo lista- Taller 2</string>
+    <string-array name="listaDiaria">
+        <item>Organizar habitación</item>
+        <item>Preparar desayuno</item>
+        <item>Hacer ejercicio</item>
+        <item>Estudiar / hacer talleres</item>
+    </string-array>
+</resources>
