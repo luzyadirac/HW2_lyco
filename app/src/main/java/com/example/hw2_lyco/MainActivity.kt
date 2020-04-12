@@ -24,6 +24,15 @@ class MainActivity : AppCompatActivity() {
             band = 0
             }
 
+        /* De esta manera no me deja borrar
+        listaAgregar.setOnItemLongClickListener { parent, view, position, id ->
+            val textico = view as TextView
+            listado.remove(textico.text.toString())
+            Toast.makeText(this, view.text.toString(), Toast.LENGTH_SHORT).show()
+            adaptador.notifyDataSetChanged()
+            listaAgregar.adapter = adaptador
+            return true
+        }*/
         listaAgregar.setOnItemClickListener { Lista, dato, position, id ->
             val textView = dato as TextView
             band = 1
